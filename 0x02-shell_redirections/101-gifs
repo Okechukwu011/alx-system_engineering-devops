@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name "*.gif" -exec bash -c 'for file; do echo "$(printf "%s\n" "${file%.*}")"; done' bash {} + | LC_COLLATE=C sort -f
+find . -type f -name "*.gif" -exec sh -c 'for file; do echo "${file%.*}"; done' sh {} + | LC_COLLATE=C sort -f
